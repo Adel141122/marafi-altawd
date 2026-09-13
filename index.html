@@ -4,11 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1C1A17">
-<title>مرافئ الطود</title>
-<meta name="description" content="مؤسسة مرافئ الطود للمقاولات العامة والإنشاءات وأعمال الترميم وإعادة التأهيل">
+<title>مرافئ الطود للمقاولات | مقاولات عامة وإنشاءات وترميم في الدمام</title>
+<meta name="description" content="مؤسسة مرافئ الطود للمقاولات في الدمام، متخصصة في المقاولات العامة والإنشاءات والترميم وإعادة تأهيل المباني، مع تنفيذ منظم وشفافية في نطاق الأعمال والتكاليف.">
+<meta name="keywords" content="مقاولات الدمام, مقاولات عامة الدمام, شركة مقاولات في الدمام, ترميم مباني الدمام, ترميم منازل الدمام, إعادة تأهيل المباني, مقاولات المنطقة الشرقية">
+<link rel="canonical" href="https://marafialtawd.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="مرافئ الطود للمقاولات">
+<meta property="og:title" content="مرافئ الطود للمقاولات | مقاولات عامة وإنشاءات وترميم في الدمام">
+<meta property="og:description" content="مؤسسة سعودية في الدمام متخصصة في المقاولات العامة والإنشاءات والترميم وإعادة التأهيل — تنفيذ منظم وشفافية في نطاق الأعمال والتكاليف.">
+<meta property="og:url" content="https://marafialtawd.com/">
+<!-- عند توفر صورة مشاركة رسمية ضع رابطها هنا:
+<meta property="og:image" content="https://marafialtawd.com/og-cover.jpg"> -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Saira:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap">
 <style>
   :root{
     --ink:#1C1A17;        /* الفحمي الأساسي */
@@ -21,9 +34,10 @@
     --line:rgba(107,87,70,.42);
     --line-soft:rgba(107,87,70,.22);
     --grid:rgba(214,194,166,.05);
+    --wa:#25D366;          /* أخضر واتساب - للزر العائم فقط */
     --maxw:1200px;
-    --ar:"IBM Plex Sans Arabic","GE SS Two","Segoe UI",Tahoma,sans-serif;
-    --lat:"Saira","DIN Next LT Pro",system-ui,sans-serif;
+    --ar:"Alexandria","Segoe UI",Tahoma,sans-serif;
+    --lat:"Alexandria",system-ui,sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -31,12 +45,13 @@
     margin:0;background:var(--ink);color:var(--stone);direction:rtl;
     font-family:var(--ar);font-weight:400;line-height:1.85;
     font-size:17px;-webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+    text-rendering:optimizeLegibility;overflow-x:hidden;
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-  h1,h2,h3,h4{margin:0;color:var(--cream);font-weight:600;line-height:1.25;text-wrap:balance}
+  h1,h2,h3,h4{margin:0;color:var(--cream);font-weight:600;line-height:1.3;text-wrap:balance}
   p{margin:0}
   a{color:inherit;text-decoration:none}
+  img{max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
   .lat{font-family:var(--lat);direction:ltr;unicode-bidi:isolate}
   .eyebrow{
@@ -48,23 +63,26 @@
   /* ===== Header ===== */
   header{position:sticky;top:0;z-index:50;background:rgba(28,26,23,.86);
     backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{display:flex;align-items:center;gap:14px}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+  .brand{display:flex;align-items:center;gap:14px;flex:none}
   .brand .mark{width:38px;height:38px;flex:none}
   .brand .txt{display:flex;flex-direction:column;line-height:1.15}
   .brand .ar{color:var(--cream);font-weight:700;font-size:19px}
-  .brand .en{font-family:var(--lat);font-size:11px;letter-spacing:.24em;color:var(--stone);text-transform:uppercase}
-  .menu{display:flex;gap:34px;align-items:center}
-  .menu a{font-size:15.5px;color:var(--stone);position:relative;padding:6px 0;transition:color .2s}
+  .brand .en{font-family:var(--lat);font-weight:500;font-size:11px;letter-spacing:.24em;color:var(--stone);text-transform:uppercase}
+  .menu{display:flex;gap:30px;align-items:center}
+  .menu a{font-size:15.5px;font-weight:500;color:var(--stone);position:relative;padding:6px 0;transition:color .2s;white-space:nowrap}
   .menu a:hover{color:var(--cream)}
   .menu a::after{content:"";position:absolute;bottom:0;right:0;height:1px;width:0;background:var(--sand);transition:width .25s}
   .menu a:hover::after{width:100%}
-  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--ar);font-size:15.5px;font-weight:600;
+  .nav-actions{display:flex;align-items:center;gap:12px;flex:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--ar);font-size:15.5px;font-weight:600;
     padding:12px 24px;border:1px solid var(--sand);color:var(--sand);background:transparent;cursor:pointer;
-    transition:background .2s,color .2s}
+    transition:background .2s,color .2s,transform .15s;text-align:center}
   .btn:hover{background:var(--sand);color:var(--ink)}
+  .btn:active{transform:translateY(1px)}
   .btn-solid{background:var(--sand);color:var(--ink);border-color:var(--sand)}
   .btn-solid:hover{background:var(--cream);border-color:var(--cream)}
+  .btn svg{width:18px;height:18px;flex:none}
   .burger{display:none;background:none;border:1px solid var(--line);color:var(--sand);width:44px;height:40px;cursor:pointer;font-size:20px}
 
   /* ===== Hero ===== */
@@ -72,24 +90,29 @@
   .hero .grid-bg{position:absolute;inset:0;z-index:0;
     background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
     background-size:52px 52px;mask-image:linear-gradient(180deg,transparent,#000 22%,#000 60%,transparent)}
-  .hero .inner{position:relative;z-index:2;padding:84px 0 90px;display:flex;flex-direction:column;align-items:center;text-align:center}
-  .hero-mark{width:clamp(122px,15vw,170px);margin-bottom:30px}
+  .hero .inner{position:relative;z-index:2;padding:80px 0 84px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero-mark{width:clamp(112px,14vw,158px);margin-bottom:26px}
   .hero-mark svg{width:100%;height:auto;display:block}
-  .hero h1{font-size:clamp(38px,6vw,72px);font-weight:700;color:var(--cream);letter-spacing:-.01em;margin:20px 0 0}
+  .hero h1{font-size:clamp(34px,5.2vw,60px);font-weight:700;color:var(--cream);letter-spacing:normal;line-height:1.32;margin:18px 0 0}
   .hero h1 .accent{color:var(--sand)}
-  .hero .lead{font-size:19px;color:var(--stone);max-width:58ch;margin:24px auto 0;line-height:1.9}
-  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:38px;justify-content:center}
-  .hero-stats{display:flex;justify-content:center;width:100%;max-width:760px;margin-top:56px;border-top:1px solid var(--line-soft)}
-  .hero-stats .kpi{flex:1;padding:28px 14px;border-inline-end:1px solid var(--line-soft)}
-  .hero-stats .kpi:last-child{border-inline-end:0}
-  .hero-stats .num{font-family:var(--lat);font-size:clamp(34px,4.6vw,46px);font-weight:600;color:var(--sand);line-height:1;display:flex;align-items:baseline;gap:4px;justify-content:center}
-  .hero-stats .num small{font-size:20px;color:var(--umber)}
-  .hero-stats .num2{font-family:var(--ar);font-size:clamp(17px,2.1vw,21px);font-weight:600;color:var(--sand);line-height:1.35;text-wrap:balance}
-  .hero-stats .lbl{font-size:13.5px;color:var(--stone);margin-top:10px}
+  .hero .lead{font-size:19px;font-weight:400;color:var(--stone);max-width:60ch;margin:22px auto 0;line-height:1.8}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;justify-content:center}
+  .hero .cta .btn{padding:13px 26px}
+  .inline-visit{margin-top:18px;font-size:15px;color:var(--stone)}
+  .inline-visit a{color:var(--sand);border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,color .2s}
+  .inline-visit a:hover{color:var(--cream);border-color:var(--sand)}
+  .hero-chips{display:flex;justify-content:center;width:100%;max-width:840px;margin-top:52px;border-top:1px solid var(--line-soft)}
+  .hero-chips .chip{flex:1;padding:26px 16px;border-inline-end:1px solid var(--line-soft);display:flex;flex-direction:column;align-items:center;gap:12px}
+  .hero-chips .chip:last-child{border-inline-end:0}
+  .hero-chips .chip svg{width:28px;height:28px;color:var(--sand)}
+  .hero-chips .chip b{font-family:var(--ar);font-size:16.5px;font-weight:600;color:var(--cream)}
+  .hero-meta{margin-top:26px;font-size:13.5px;color:var(--umber);letter-spacing:.02em}
+  .hero-meta .lat{color:var(--stone)}
 
   /* ===== Section shell ===== */
-  section{padding:92px 0}
-  .sec-head{max-width:70ch;margin-bottom:52px}
+  section{padding:88px 0}
+  .sec-head{max-width:72ch;margin-bottom:48px}
+  .sec-head.center{margin-inline:auto;text-align:center}
   .sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:16px}
   .sec-head p{margin-top:16px;font-size:17.5px;color:var(--stone)}
   .band{background:var(--ink-2);border-block:1px solid var(--line-soft)}
@@ -117,67 +140,162 @@
   .svc-card li{font-size:15px;color:var(--stone);display:flex;gap:11px;align-items:flex-start}
   .svc-card li::before{content:"";width:6px;height:6px;background:var(--umber);margin-top:9px;flex:none}
 
-  /* ===== Process ===== */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);counter-reset:st}
-  .step{padding:34px 28px;border-inline-end:1px solid var(--line-soft)}
-  .step:last-child{border-inline-end:0}
-  .step .sn{font-family:var(--lat);font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--sand)}
-  .step h4{font-size:18.5px;margin:16px 0 10px}
+  /* ===== Audience (لمن نقدم خدماتنا) ===== */
+  .aud{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .aud-card{border:1px solid var(--line);background:var(--ink-2);padding:32px 30px;display:flex;flex-direction:column;gap:16px;transition:transform .3s ease,background .25s ease}
+  .aud-card:hover{transform:translateY(-4px);background:var(--ink-3)}
+  .aud-card .ai{width:40px;height:40px;color:var(--sand)}
+  .aud-card h3{font-size:20px}
+  .aud-card ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .aud-card li{font-size:15px;color:var(--stone);display:flex;gap:11px;align-items:flex-start}
+  .aud-card li::before{content:"";width:6px;height:6px;background:var(--umber);margin-top:9px;flex:none}
+
+  /* ===== Process (كيف نعمل) ===== */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+  .step{padding:32px 28px;border-inline-end:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .step:nth-child(3n){border-inline-end:0}
+  .step:nth-last-child(-n+3){border-bottom:0}
+  .step .sn{font-family:var(--lat);font-size:26px;font-weight:600;color:var(--sand);line-height:1}
+  .step h4{font-size:18.5px;margin:14px 0 9px}
   .step p{font-size:14.5px;color:var(--stone)}
 
-  /* ===== Projects ===== */
+  /* ===== Why ===== */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+  .why-item{padding:30px 32px;border-inline-end:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;gap:14px;transition:background .25s}
+  .why-item:hover{background:var(--ink-2)}
+  .why-item:nth-child(3n){border-inline-end:0}
+  .why-item:nth-last-child(-n+3){border-bottom:0}
+  .why-item .wi{width:34px;height:34px;color:var(--sand);flex:none}
+  .why-item h4{font-size:19px;margin-bottom:6px}
+  .why-item p{font-size:15px;color:var(--stone)}
+
+  /* ===== Benefits (ماذا يحصل عليه العميل) ===== */
+  .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .benefit{border:1px solid var(--line);background:var(--ink-2);padding:24px 26px;display:flex;gap:16px;align-items:center}
+  .benefit .bk{width:34px;height:34px;flex:none;color:var(--sand)}
+  .benefit b{font-family:var(--ar);font-size:17px;font-weight:600;color:var(--cream)}
+
+  /* ===== Projects (مشاريعنا) ===== */
   .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .pcard{border:1px solid var(--line);background:var(--ink-2);display:flex;flex-direction:column;overflow:hidden}
+  .pcard{border:1px solid var(--line);background:var(--ink-2);display:flex;flex-direction:column;overflow:hidden;transition:transform .3s ease}
+  .pcard:hover{transform:translateY(-4px)}
   .pcard .ph{aspect-ratio:4/3;background:var(--ink-3);position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft)}
-  .pcard .ph svg{position:absolute;inset:0;width:100%;height:100%}
+  .pcard .ph svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .5s ease}
+  .pcard:hover .ph svg{transform:scale(1.04)}
   .pcard .cat{position:absolute;top:0;inset-inline-start:0;background:var(--sand);color:var(--ink);font-size:12.5px;font-weight:600;padding:6px 13px}
   .pcard .info{padding:22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
   .pcard h4{font-size:18.5px}
   .pcard .meta{font-family:var(--lat);font-size:13px;letter-spacing:.06em;color:var(--umber);margin-top:auto}
   .pcard .meta span{color:var(--stone)}
+  /* لوحة "قيد بناء السجل" - تُعرض عند عدم وجود مشاريع منشورة */
+  .proj-empty{border:1px solid var(--line);background:var(--ink-2);position:relative;overflow:hidden;
+    padding:64px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px}
+  .proj-empty .grid-bg{position:absolute;inset:0;z-index:0;opacity:.6;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:44px 44px;mask-image:radial-gradient(circle at 50% 40%,#000,transparent 75%)}
+  .proj-empty>*{position:relative;z-index:1}
+  .proj-empty .pe-mark{width:66px;height:66px;color:var(--sand);opacity:.9}
+  .proj-empty h3{font-size:clamp(22px,3vw,30px)}
+  .proj-empty p{font-size:16.5px;color:var(--stone);max-width:52ch}
+  .proj-empty .btn{margin-top:6px}
 
-  /* ===== Why ===== */
-  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line)}
-  .why-item{padding:32px 34px;border-inline-end:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);display:flex;gap:20px}
-  .why-item:nth-child(2n){border-inline-end:0}
-  .why-item:nth-last-child(-n+2){border-bottom:0}
-  .why-item .wi{width:34px;height:34px;color:var(--sand);flex:none}
-  .why-item h4{font-size:19px;margin-bottom:8px}
-  .why-item p{font-size:15px;color:var(--stone)}
+  /* ===== Reviews (آراء العملاء) ===== */
+  .rev-empty{border:1px dashed var(--line);background:var(--ink-2);padding:48px 36px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+  .rev-empty .re-mark{width:48px;height:48px;color:var(--sand);opacity:.85}
+  .rev-empty h3{font-size:22px}
+  .rev-empty p{font-size:16px;color:var(--stone);max-width:52ch}
+  /* قالب بطاقة رأي جاهز للاستخدام مستقبلًا (انسخ .rev-card داخل .reviews-grid وأزل .rev-empty)
+  <div class="reviews-grid">
+    <figure class="rev-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>نص رأي العميل الحقيقي هنا.</blockquote>
+      <figcaption><b>اسم العميل</b><span>نوع المشروع · المدينة</span></figcaption>
+    </figure>
+  </div> -->
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rev-card{border:1px solid var(--line);background:var(--ink-2);padding:28px;display:flex;flex-direction:column;gap:14px}
+  .rev-card .stars{color:var(--sand);letter-spacing:3px;font-size:16px}
+  .rev-card blockquote{margin:0;font-size:16px;color:var(--cream);line-height:1.8}
+  .rev-card figcaption{display:flex;flex-direction:column;gap:2px;margin-top:auto}
+  .rev-card figcaption b{color:var(--cream);font-size:15.5px}
+  .rev-card figcaption span{color:var(--umber);font-size:13.5px}
+
+  /* ===== FAQ ===== */
+  .faq{border:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line-soft)}
+  .faq details:last-child{border-bottom:0}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+    font-size:17.5px;font-weight:600;color:var(--cream);transition:color .2s}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--sand)}
+  .faq summary .fq-ico{width:22px;height:22px;flex:none;color:var(--sand);transition:transform .3s}
+  .faq details[open] summary .fq-ico{transform:rotate(45deg)}
+  .faq .fa-body{padding:0 28px 24px;font-size:15.5px;color:var(--stone);line-height:1.9;max-width:80ch}
 
   /* ===== Contact ===== */
-  .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .cinfo{display:grid;gap:0;border:1px solid var(--line)}
-  .cinfo .row{padding:24px 28px;border-bottom:1px solid var(--line-soft);display:flex;gap:18px;align-items:flex-start}
+  .contact{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+  .cinfo{display:grid;gap:0;border:1px solid var(--line);align-content:start}
+  .cinfo .row{padding:22px 26px;border-bottom:1px solid var(--line-soft);display:flex;gap:18px;align-items:flex-start}
   .cinfo .row:last-child{border-bottom:0}
   .cinfo .ci{width:26px;height:26px;color:var(--sand);flex:none;margin-top:3px}
-  .cinfo .k{font-size:14px;color:var(--umber);font-family:var(--lat);letter-spacing:.14em;text-transform:uppercase}
-  .cinfo .v{font-size:17px;color:var(--cream);margin-top:4px}
+  .cinfo .k{font-size:13px;color:var(--umber);font-family:var(--lat);letter-spacing:.14em;text-transform:uppercase}
+  .cinfo .v{font-size:16.5px;color:var(--cream);margin-top:4px}
   .cinfo .v .lat{color:var(--cream)}
   .cinfo .v a{color:var(--cream);transition:color .2s}
   .cinfo .v a:hover{color:var(--sand)}
+  .cinfo .v small{display:block;font-size:13px;color:var(--umber);margin-top:2px}
   form{display:grid;gap:16px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   label{font-size:14px;color:var(--stone);display:block;margin-bottom:8px}
-  input,textarea{width:100%;background:var(--ink-2);border:1px solid var(--line);color:var(--cream);
-    font-family:var(--ar);font-size:16px;padding:14px 16px;transition:border-color .2s}
-  input:focus,textarea:focus{outline:none;border-color:var(--sand)}
+  label .opt{color:var(--umber);font-size:12.5px}
+  input,textarea,select{width:100%;background:var(--ink-2);border:1px solid var(--line);color:var(--cream);
+    font-family:var(--ar);font-size:16px;padding:14px 16px;transition:border-color .2s;border-radius:0}
+  select{appearance:none;-webkit-appearance:none;cursor:pointer;
+    background-image:linear-gradient(45deg,transparent 50%,var(--sand) 50%),linear-gradient(135deg,var(--sand) 50%,transparent 50%);
+    background-position:calc(0% + 20px) calc(50% - 3px),calc(0% + 26px) calc(50% - 3px);
+    background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+  select option{background:var(--ink-2);color:var(--cream)}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sand)}
   textarea{resize:vertical;min-height:130px}
   form .btn{justify-content:center;margin-top:6px}
   .note{font-size:13.5px;color:var(--umber);margin-top:2px}
 
+  /* ===== Final CTA ===== */
+  .final-cta{position:relative;overflow:hidden;border-block:1px solid var(--line);background:var(--ink-2);text-align:center;padding:76px 0}
+  .final-cta .grid-bg{position:absolute;inset:0;z-index:0;opacity:.7;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:52px 52px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 78%)}
+  .final-cta .fc-inner{position:relative;z-index:1;max-width:70ch;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .final-cta h2{font-size:clamp(26px,3.4vw,38px)}
+  .final-cta p{font-size:17px;color:var(--stone)}
+  .final-cta .cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+
   /* ===== Footer ===== */
   footer{background:var(--ink-2);border-top:1px solid var(--line);padding:56px 0 34px}
-  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-soft)}
-  .foot p{font-size:15px;color:var(--stone);max-width:36ch;margin-top:18px}
+  .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-soft)}
+  .foot p{font-size:15px;color:var(--stone);max-width:40ch;margin-top:18px}
+  .foot .foot-addr{font-size:14.5px;color:var(--umber);margin-top:14px}
   .foot h5{font-size:13px;font-family:var(--lat);letter-spacing:.18em;text-transform:uppercase;color:var(--umber);margin-bottom:16px}
   .foot ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}
   .foot li a{font-size:15px;color:var(--stone);transition:color .2s}
   .foot li a:hover{color:var(--sand)}
+  .socials{display:flex;gap:12px;margin-top:20px}
+  .socials a{width:42px;height:42px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--sand);transition:background .2s,color .2s,border-color .2s}
+  .socials a:hover{background:var(--sand);color:var(--ink);border-color:var(--sand)}
+  .socials a svg{width:20px;height:20px}
   .copy{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;color:var(--umber)}
   .copy .lat{color:var(--umber)}
 
+  /* ===== Floating WhatsApp ===== */
+  .fab{position:fixed;inset-block-end:22px;inset-inline-start:22px;z-index:60;
+    display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#0b3d1e;
+    padding:13px 18px;border-radius:999px;font-family:var(--ar);font-weight:600;font-size:15px;
+    box-shadow:0 8px 26px rgba(0,0,0,.4);transition:transform .2s,box-shadow .2s}
+  .fab:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+  .fab svg{width:22px;height:22px;flex:none}
+  .fab .fab-txt{white-space:nowrap}
+
   /* ===== Motion (طبقة الحركة) ===== */
-  /* كل شيء ظاهر افتراضياً؛ الحركة تُفعّل فقط عند إضافة .motion على <html> عبر JS */
   html.motion [data-reveal]{opacity:0;transform:translateY(24px);
     transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1)}
   html.motion [data-reveal].in{opacity:1;transform:none}
@@ -185,25 +303,26 @@
     transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
   html.motion [data-stagger].in>*{opacity:1;transform:none}
   html.motion [data-stagger].in>*:nth-child(1){transition-delay:.00s}
-  html.motion [data-stagger].in>*:nth-child(2){transition-delay:.10s}
-  html.motion [data-stagger].in>*:nth-child(3){transition-delay:.20s}
-  html.motion [data-stagger].in>*:nth-child(4){transition-delay:.30s}
+  html.motion [data-stagger].in>*:nth-child(2){transition-delay:.08s}
+  html.motion [data-stagger].in>*:nth-child(3){transition-delay:.16s}
+  html.motion [data-stagger].in>*:nth-child(4){transition-delay:.24s}
+  html.motion [data-stagger].in>*:nth-child(5){transition-delay:.32s}
+  html.motion [data-stagger].in>*:nth-child(6){transition-delay:.40s}
 
-  /* دخول الواجهة عند التحميل */
   html.motion .hero .inner>*{opacity:0;animation:heroIn .85s cubic-bezier(.22,.61,.36,1) forwards}
   html.motion .hero-mark{animation-delay:0s}
   html.motion .hero .eyebrow{animation-delay:.15s}
   html.motion .hero h1{animation-delay:.25s}
   html.motion .hero .lead{animation-delay:.40s}
-  html.motion .hero .cta{animation-delay:.55s}
-  html.motion .hero-stats{animation-delay:.70s}
+  html.motion .hero .cta{animation-delay:.52s}
+  html.motion .hero .inline-visit{animation-delay:.60s}
+  html.motion .hero-chips{animation-delay:.70s}
+  html.motion .hero-meta{animation-delay:.80s}
   @keyframes heroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 
-  /* انزياح لطيف للشبكة الهندسية */
   html.motion .hero .grid-bg{animation:gridDrift 30s linear infinite}
   @keyframes gridDrift{from{background-position:0 0,0 0}to{background-position:52px 52px,52px 52px}}
 
-  /* ظهور الشعار متحركاً (رسم الحلقة ثم صعود الطود ثم القاعدة) */
   html.motion .logoreveal .lr-ring{stroke-dasharray:202;stroke-dashoffset:202;
     transform:rotate(-90deg);transform-box:fill-box;transform-origin:center;
     animation:lrRing 1s cubic-bezier(.65,0,.35,1) .15s forwards}
@@ -216,17 +335,11 @@
   @keyframes lrRing{to{stroke-dashoffset:0}}
   @keyframes lrRise{to{opacity:1;transform:none}}
 
-  /* طَوَفان لطيف للشعار المركزي بعد اكتمال رسمه */
   html.motion .hero-mark svg{animation:heroFloat 7s ease-in-out 1.4s infinite}
   @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 
-  /* رفع خفيف للبطاقات عند المرور */
-  .svc-card,.pcard,.why-item,.pillar{transition:transform .3s ease,background .25s ease}
-  .pcard:hover{transform:translateY(-4px)}
-  .pcard .ph svg{transition:transform .5s ease}
-  .pcard:hover .ph svg{transform:scale(1.04)}
+  .svc-card,.pcard,.why-item,.pillar,.aud-card{transition:transform .3s ease,background .25s ease}
   .btn{transition:background .2s,color .2s,transform .15s}
-  .btn:active{transform:translateY(1px)}
   header{transition:border-color .3s,background .3s}
   header.scrolled{border-bottom-color:var(--line)}
 
@@ -245,27 +358,41 @@
     .svc,.steps{grid-template-columns:1fr}
     .svc-card{border-inline-end:0;border-bottom:1px solid var(--line-soft)}
     .svc-card:last-child{border-bottom:0}
-    .step{border-inline-end:0;border-bottom:1px solid var(--line-soft)}
+    .step{border-inline-end:0}
+    .step:nth-child(3n){border-inline-end:0}
+    .step:nth-last-child(-n+3){border-bottom:1px solid var(--line-soft)}
     .step:last-child{border-bottom:0}
-    .proj{grid-template-columns:repeat(2,1fr)}
+    .aud,.proj,.benefits,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .why{grid-template-columns:repeat(2,1fr)}
+    .why-item:nth-child(3n){border-inline-end:1px solid var(--line-soft)}
+    .why-item:nth-child(2n){border-inline-end:0}
+    .why-item:nth-last-child(-n+3){border-bottom:1px solid var(--line-soft)}
+    .why-item:nth-last-child(-n+2){border-bottom:0}
     .foot{grid-template-columns:1fr 1fr}
   }
   @media (max-width:640px){
+    body{font-size:16.5px}
     .menu{display:none}
     .burger{display:inline-flex;align-items:center;justify-content:center}
     .menu.open{display:flex;position:absolute;top:74px;inset-inline:0;flex-direction:column;background:var(--ink-2);
       border-bottom:1px solid var(--line);padding:20px 28px;gap:18px}
-    .nav .btn{display:none}
-    .why{grid-template-columns:1fr}
-    .why-item{border-inline-end:0}
-    .why-item:nth-last-child(2){border-bottom:1px solid var(--line-soft)}
-    .proj{grid-template-columns:1fr}
+    .nav-actions .btn{display:none}
+    .hero .cta{flex-direction:column;width:100%;max-width:320px}
+    .hero .cta .btn{width:100%}
+    .hero-chips{flex-direction:column;max-width:340px}
+    .hero-chips .chip{border-inline-end:0;border-bottom:1px solid var(--line-soft);flex-direction:row;justify-content:flex-start;gap:14px;padding:18px 20px}
+    .hero-chips .chip:last-child{border-bottom:0}
+    .aud,.proj,.benefits,.reviews-grid,.why{grid-template-columns:1fr}
+    .why-item{border-inline-end:0!important;border-bottom:1px solid var(--line-soft)!important}
+    .why-item:last-child{border-bottom:0!important}
+    .frow{grid-template-columns:1fr}
     .foot{grid-template-columns:1fr}
-    section{padding:64px 0}
-    .hero .inner{padding:56px 0 64px}
-    .hero-stats{flex-direction:column;max-width:320px}
-    .hero-stats .kpi{border-inline-end:0;border-bottom:1px solid var(--line-soft)}
-    .hero-stats .kpi:last-child{border-bottom:0}
+    .copy{flex-direction:column;gap:8px}
+    section{padding:60px 0}
+    .hero .inner{padding:52px 0 60px}
+    .final-cta{padding:56px 0}
+    .fab .fab-txt{display:none}
+    .fab{padding:14px}
   }
 </style>
 </head>
@@ -291,12 +418,15 @@
     <nav class="menu" id="menu">
       <a href="#about">من نحن</a>
       <a href="#services">خدماتنا</a>
-      <a href="#process">آلية العمل</a>
-      <a href="#why">لماذا نحن</a>
+      <a href="#process">كيف نعمل</a>
+      <a href="#projects">مشاريعنا</a>
+      <a href="#faq">الأسئلة الشائعة</a>
       <a href="#contact">تواصل معنا</a>
     </nav>
-    <a href="#contact" class="btn btn-solid">اطلب عرض سعر</a>
-    <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false">☰</button>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-solid">اطلب عرض سعر</a>
+      <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false">☰</button>
+    </div>
   </div>
 </header>
 
@@ -313,17 +443,28 @@
         </svg>
       </div>
       <span class="eyebrow">General Contracting Est.</span>
-      <h1>نُرسي الثقة، ونبني ما <span class="accent">يدوم</span>.</h1>
-      <p class="lead">مؤسسة مرافئ الطود للمقاولات — متخصّصون في البناء والإنشاءات العامة وأعمال الترميم وإعادة التأهيل، بثبات الطود ودقّة الالتزام.</p>
+      <h1>نبني بثقة، وننفّذ <span class="accent">باحتراف</span>.</h1>
+      <p class="lead">مؤسسة سعودية مقرّها الدمام، متخصّصة في المقاولات العامة والإنشاءات والترميم وإعادة التأهيل — نُرسي الثقة، ونبني ما يدوم.</p>
       <div class="cta">
-        <a href="#contact" class="btn btn-solid">تواصل معنا</a>
+        <a href="#contact" class="btn btn-solid">اطلب عرض سعر</a>
         <a href="#services" class="btn">تعرّف على خدماتنا</a>
       </div>
-      <div class="hero-stats">
-        <div class="kpi"><div class="num2">حديثة التأسيس</div><div class="lbl">مؤسسة سعودية · س.ت 7055090851 · الدمام</div></div>
-        <div class="kpi"><div class="num2">عقود واضحة</div><div class="lbl">شروط وأسعار شفافة بلا مفاجآت</div></div>
-        <div class="kpi"><div class="num2">التزام بالمواعيد</div><div class="lbl">جداول زمنية واقعية نلتزم بها</div></div>
+      <p class="inline-visit">لديك موقع جاهز؟ <a href="#contact" data-project="معاينة">اطلب معاينة لمشروعك</a></p>
+      <div class="hero-chips">
+        <div class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v5h5"/><path d="M14 3H5v18h14V8z"/><path d="M8 13h8M8 17h5"/></svg>
+          <b>عقد ونطاق أعمال واضح</b>
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <b>متابعة وإشراف على التنفيذ</b>
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          <b>تسليم منظّم وموثّق</b>
+        </div>
       </div>
+      <p class="hero-meta">مؤسسة سعودية · الدمام، المنطقة الشرقية · س.ت <span class="lat">7055090851</span></p>
     </div>
   </section>
 
@@ -336,13 +477,14 @@
       </div>
       <div class="about">
         <div class="body" data-reveal>
-          <p>مرافئ الطود مؤسسة سعودية حديثة التأسيس، متخصصة في البناء والإنشاءات وأعمال الترميم وإعادة التأهيل. تأسّست على مبدأ واضح: أن يكون كل مشروع شاهداً على الجودة والالتزام، لا مجرّد وعد.</p>
-          <p>نبني نموذجنا على شراكات مع منفّذين مُختارين بعناية، وإشرافٍ دقيق على التنفيذ، والتزامٍ تعاقدي شفاف — لنقدّم لعملائنا عقوداً واضحة وجداول زمنية نلتزم بها من أول اجتماع حتى التسليم.</p>
+          <p>مرافئ الطود مؤسسة سعودية مقرّها الدمام في المنطقة الشرقية، متخصصة في المقاولات العامة والإنشاءات وأعمال الترميم وإعادة التأهيل. نعمل بمبدأ واضح: أن يكون كل مشروع شاهداً على جودة التنفيذ والالتزام، لا مجرّد وعد.</p>
+          <p>نبني نموذجنا على نطاق أعمال موثّق قبل البدء، وإشرافٍ دقيق على التنفيذ، وشراكات مع منفّذين مُختارين حسب طبيعة كل مشروع — لنقدّم لعملائنا عقوداً واضحة وجداول زمنية نلتزم بها من أول اجتماع حتى التسليم.</p>
+          <p>ولأننا مؤسسة حديثة النشأة، نعوّض ذلك بشفافية كاملة وتنظيم دقيق ومتابعة لصيقة لكل مرحلة — نبني سجلّنا مشروعاً تلو الآخر، وثقة عملائنا هي أساسه.</p>
           <div class="name-mean">«الطود» هو الجبل الراسخ الشامخ، و«المرافئ» هي مواطن الأمان والرسوّ — واسمنا وعدٌ بالثبات الذي نبني عليه، والثقة التي يرسو إليها عملاؤنا.</div>
         </div>
         <div class="pillars" data-stagger>
-          <div class="pillar"><span class="pn lat">01</span><div><h4>رؤيتنا</h4><p>أن نكون الخيار الأول في المقاولات المتكاملة عبر جودة تُقاس بالنتائج لا بالوعود.</p></div></div>
-          <div class="pillar"><span class="pn lat">02</span><div><h4>رسالتنا</h4><p>تنفيذ مشاريع إنشائية تدوم، ضمن الميزانية والجدول الزمني، وبمعايير سلامة صارمة.</p></div></div>
+          <div class="pillar"><span class="pn lat">01</span><div><h4>رؤيتنا</h4><p>أن نكون خياراً موثوقاً في المقاولات المتكاملة عبر جودة تُقاس بالنتائج لا بالوعود.</p></div></div>
+          <div class="pillar"><span class="pn lat">02</span><div><h4>رسالتنا</h4><p>تنفيذ مشاريع تدوم، ضمن الميزانية والجدول الزمني، وبمعايير سلامة صارمة.</p></div></div>
           <div class="pillar"><span class="pn lat">03</span><div><h4>قيمنا</h4><p>الالتزام، الإتقان، الشفافية، والاحترام الكامل لثقة العميل في كل تفصيل.</p></div></div>
         </div>
       </div>
@@ -355,13 +497,13 @@
       <div class="sec-head" data-reveal>
         <span class="eyebrow">Our Services</span>
         <h2>خدماتنا</h2>
-        <p>مجالان نتقنهما، ونغطّي فيهما دورة المشروع كاملة — من التصميم حتى التسليم.</p>
+        <p>مجالان نتقنهما، ونغطّي فيهما دورة المشروع كاملة — من نطاق العمل حتى التسليم.</p>
       </div>
       <div class="svc" data-stagger>
         <div class="svc-card">
           <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M6 42V20l14-10 14 10v22"/><path d="M6 42h36"/><rect x="16" y="28" width="8" height="14"/><path d="M20 10V4h20v18"/><path d="M40 42V22"/></svg>
           <h3>المقاولات العامة والإنشاءات</h3>
-          <p>بناء المنشآت السكنية والتجارية بجودة تدوم، من الأساسات حتى التسليم.</p>
+          <p>تنفيذ وإدارة أعمال البناء وفق نطاق عمل واضح ومراحل تنفيذ منظمة — من الأساسات حتى التسليم.</p>
           <ul>
             <li>الهياكل الخرسانية والأعمال الإنشائية</li>
             <li>البناء السكني والتجاري</li>
@@ -372,7 +514,7 @@
         <div class="svc-card">
           <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M30 6l4 4-16 16-6 2 2-6z"/><path d="M8 42h32"/><path d="M12 42V26l10-10"/><path d="M36 42V22"/></svg>
           <h3>الترميم وإعادة التأهيل</h3>
-          <p>إعادة الحياة للمباني القائمة ورفع كفاءتها الإنشائية والجمالية.</p>
+          <p>إعادة تأهيل المباني والمساحات القائمة، ومعالجة الأعمال التي تحتاج إلى تطوير أو تحسين أو تجديد.</p>
           <ul>
             <li>ترميم المباني والمنشآت</li>
             <li>إعادة التأهيل والتقوية الإنشائية</li>
@@ -384,61 +526,276 @@
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section id="process">
+  <!-- AUDIENCE (لمن نقدم خدماتنا) -->
+  <section id="audience">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Who We Serve</span>
+        <h2>لمن نقدّم خدماتنا؟</h2>
+        <p>نعمل مع أصحاب المشاريع على اختلاف احتياجاتهم — بنطاق عمل واضح لكل حالة.</p>
+      </div>
+      <div class="aud" data-stagger>
+        <div class="aud-card">
+          <svg class="ai" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="11" r="5"/><path d="M6 28c0-5.5 4.5-9 10-9s10 3.5 10 9"/></svg>
+          <h3>الأفراد</h3>
+          <ul>
+            <li>بناء المنازل</li>
+            <li>الترميم</li>
+            <li>التشطيبات</li>
+            <li>إعادة التأهيل</li>
+          </ul>
+        </div>
+        <div class="aud-card">
+          <svg class="ai" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M5 28V9l11-4v23"/><path d="M16 28V13l11 4v11"/><path d="M2 28h28"/><path d="M9 12v0M9 17v0M9 22v0M21 21v0M21 25v0"/></svg>
+          <h3>المنشآت التجارية</h3>
+          <ul>
+            <li>المكاتب</li>
+            <li>المحلات</li>
+            <li>المباني التجارية</li>
+            <li>التجديد وإعادة التأهيل</li>
+          </ul>
+        </div>
+        <div class="aud-card">
+          <svg class="ai" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M4 28V14l12-8 12 8v14z"/><path d="M12 28v-8h8v8"/><path d="M20 4l6 4"/></svg>
+          <h3>ملاك ومستثمرو العقارات</h3>
+          <ul>
+            <li>إعادة تأهيل العقارات</li>
+            <li>أعمال الصيانة والتطوير</li>
+            <li>إدارة وتنفيذ المشاريع</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS (كيف نعمل) -->
+  <section id="process" class="band">
     <div class="wrap">
       <div class="sec-head" data-reveal>
         <span class="eyebrow">How We Work</span>
-        <h2>آلية العمل</h2>
+        <h2>كيف نعمل؟</h2>
         <p>منهجية واضحة نلتزم بها في كل مشروع، خطوةً بخطوة.</p>
       </div>
       <div class="steps" data-stagger>
-        <div class="step"><div class="sn lat">STEP 01</div><h4>الدراسة والاستشارة</h4><p>فهم احتياج العميل، معاينة الموقع، وتقديم الاستشارة الفنية والتقدير المبدئي.</p></div>
-        <div class="step"><div class="sn lat">STEP 02</div><h4>التصميم والتخطيط</h4><p>إعداد المخططات والجداول الزمنية والميزانية التفصيلية قبل الانطلاق.</p></div>
-        <div class="step"><div class="sn lat">STEP 03</div><h4>التنفيذ</h4><p>تنفيذ ميداني منضبط بإشراف هندسي مستمر ومعايير سلامة صارمة.</p></div>
-        <div class="step"><div class="sn lat">STEP 04</div><h4>التسليم والضمان</h4><p>تسليم المشروع في موعده مع ضمان جودة الأعمال وسلامة التنفيذ.</p></div>
+        <div class="step"><div class="sn lat">01</div><h4>المعاينة وفهم المشروع</h4><p>نفهم احتياجات المشروع ونطاق الأعمال والمتطلبات.</p></div>
+        <div class="step"><div class="sn lat">02</div><h4>إعداد العرض</h4><p>نقدّم نطاق أعمال وتكلفة واضحة قبل بدء التنفيذ.</p></div>
+        <div class="step"><div class="sn lat">03</div><h4>التخطيط والتنفيذ</h4><p>تنفيذ الأعمال وفق خطة ومراحل محددة.</p></div>
+        <div class="step"><div class="sn lat">04</div><h4>المتابعة والجودة</h4><p>متابعة سير العمل ومراجعة جودة التنفيذ.</p></div>
+        <div class="step"><div class="sn lat">05</div><h4>التوثيق</h4><p>توثيق مراحل المشروع وإطلاع العميل على التقدّم.</p></div>
+        <div class="step"><div class="sn lat">06</div><h4>التسليم</h4><p>مراجعة الأعمال وتسليم المشروع وفق النطاق المتفق عليه.</p></div>
       </div>
     </div>
   </section>
 
   <!-- WHY -->
-  <section id="why" class="band">
+  <section id="why">
     <div class="wrap">
       <div class="sec-head" data-reveal>
         <span class="eyebrow">Why Marafi Altawd</span>
-        <h2>لماذا تختار مرافئ الطود</h2>
+        <h2>لماذا مرافئ الطود؟</h2>
+        <p>مزايا عملية ملموسة، لا عبارات عامة.</p>
       </div>
       <div class="why" data-stagger>
-        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3l11 5v7c0 7-4.6 11.6-11 14C9.6 26.6 5 22 5 15V8z"/><path d="M11 16l3.5 3.5L22 12"/></svg><div><h4>جودة والتزام بالسلامة</h4><p>نطبّق معايير الجودة والسلامة المهنية في كل مرحلة، لأن السلامة ليست خياراً.</p></div></div>
-        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg><div><h4>الالتزام بالمواعيد</h4><p>جداول زمنية واقعية نلتزم بها — تسليمٌ في وقته دون مساومة على الجودة.</p></div></div>
-        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="4"/><path d="M4 27c0-4 3-7 7-7s7 3 7 7"/><path d="M21 8a4 4 0 010 8"/><path d="M22 20c3 .5 6 3 6 7"/></svg><div><h4>منفّذون مختارون</h4><p>نتعاقد مع فرق تنفيذ منتقاة بعناية، ونشرف على جودة أعمالها حتى التسليم.</p></div></div>
-        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3v26"/><path d="M9 7h11a4.5 4.5 0 010 9H10a4.5 4.5 0 000 9h13"/></svg><div><h4>أسعار تنافسية وشفافة</h4><p>عروض أسعار واضحة بلا تكاليف مخفية، وقيمة حقيقية مقابل كل ريال.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M6 5h16l4 4v18H6z"/><path d="M22 5v4h4"/><path d="M10 15h12M10 20h9"/></svg><div><h4>عقد واضح</h4><p>نطاق الأعمال والتكاليف والالتزامات موثّقة قبل بدء التنفيذ.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="8"/><path d="M20 20l6 6"/><path d="M14 10v4l3 2"/></svg><div><h4>متابعة وإشراف</h4><p>متابعة مراحل التنفيذ والتأكد من سير الأعمال وفق الخطة.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M8 4h12l6 6v18H8z"/><path d="M20 4v6h6"/><path d="M13 17l2.5 2.5L21 14"/></svg><div><h4>توثيق مراحل العمل</h4><p>إطلاع العميل على تقدّم المشروع من خلال التوثيق المرحلي.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="4"/><path d="M4 27c0-4 3-7 7-7s7 3 7 7"/><path d="M21 8a4 4 0 010 8"/><path d="M22 20c3 .5 6 3 6 7"/></svg><div><h4>شركاء متخصصون</h4><p>الاستعانة بمنفّذين وشركاء متخصصين حسب طبيعة المشروع عند الحاجة.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l4 2"/><path d="M16 4v2M16 26v2M4 16h2M26 16h2"/></svg><div><h4>شفافية في التنفيذ</h4><p>وضوح في نطاق الأعمال والتكاليف والتغييرات أثناء المشروع.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M5 8l11-4 11 4-11 4z"/><path d="M5 8v12l11 4 11-4V8"/><path d="M11 19l3 3 6-6"/></svg><div><h4>تسليم منظّم</h4><p>مراجعة الأعمال قبل التسليم النهائي وفق نطاق العمل المتفق عليه.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
+  <!-- BENEFITS (ماذا يحصل عليه العميل) -->
+  <section id="benefits" class="band">
+    <div class="wrap">
+      <div class="sec-head center" data-reveal>
+        <span class="eyebrow">What You Get</span>
+        <h2>مع مرافئ الطود تحصل على</h2>
+      </div>
+      <div class="benefits" data-stagger>
+        <div class="benefit"><svg class="bk" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.2 3.2L21 13"/></svg><b>نطاق عمل واضح</b></div>
+        <div class="benefit"><svg class="bk" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.2 3.2L21 13"/></svg><b>عرض سعر منظّم</b></div>
+        <div class="benefit"><svg class="bk" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.2 3.2L21 13"/></svg><b>جدول زمني للمشروع</b></div>
+        <div class="benefit"><svg class="bk" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.2 3.2L21 13"/></svg><b>متابعة التنفيذ</b></div>
+        <div class="benefit"><svg class="bk" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.2 3.2L21 13"/></svg><b>توثيق مراحل العمل</b></div>
+        <div class="benefit"><svg class="bk" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.2 3.2L21 13"/></svg><b>تسليم منظّم</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (مشاريعنا) -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Our Projects</span>
+        <h2>مشاريعنا</h2>
+      </div>
+
+      <!--
+        ▼▼ عند توفّر مشاريع حقيقية: احذف كتلة .proj-empty أدناه، وفعّل شبكة .proj التالية،
+        وكرّر بطاقة .pcard لكل مشروع مع بياناته الحقيقية (اسم، مدينة، نوع، نطاق، مدة، صور قبل/بعد).
+
+      <div class="proj" data-stagger>
+        <article class="pcard">
+          <div class="ph">
+            <span class="cat">إنشاءات</span>
+            <img src="images/project-1.jpg" alt="وصف المشروع" loading="lazy">
+          </div>
+          <div class="info">
+            <h4>اسم المشروع</h4>
+            <p>نطاق الأعمال المنفّذة في المشروع.</p>
+            <div class="meta">المدينة · نوع المشروع · <span>مدة التنفيذ</span></div>
+          </div>
+        </article>
+      </div>
+      ▲▲ -->
+
+      <div class="proj-empty" data-reveal>
+        <div class="grid-bg" aria-hidden="true"></div>
+        <svg class="pe-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="47" r="30" stroke="currentColor" stroke-width="6"/>
+          <path d="M45 25 L55 25 L60 69 L40 69 Z" fill="currentColor"/>
+          <rect x="34" y="67" width="32" height="10" fill="currentColor"/>
+        </svg>
+        <h3>مشاريع تُبنى على الثقة</h3>
+        <p>نعمل على بناء سجل مشاريع موثّق يعكس مستوى التنفيذ والالتزام الذي نطمح لتقديمه في كل مشروع.</p>
+        <a href="#contact" class="btn btn-solid">هل لديك مشروع؟ ابدأ معنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS (آراء العملاء) -->
+  <section id="reviews" class="band">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Client Reviews</span>
+        <h2>آراء عملائنا</h2>
+      </div>
+
+      <!--
+        ▼▼ عند توفّر تقييمات حقيقية: احذف كتلة .rev-empty أدناه واستخدم القالب التالي.
+            استخدم أسماء عملاء حقيقيين فقط، ولا تختلق تقييمات.
+
+      <div class="reviews-grid" data-stagger>
+        <figure class="rev-card">
+          <div class="stars" aria-label="5 من 5">★★★★★</div>
+          <blockquote>نص رأي العميل الحقيقي هنا.</blockquote>
+          <figcaption><b>اسم العميل</b><span>نوع المشروع · المدينة</span></figcaption>
+        </figure>
+      </div>
+      ▲▲ -->
+
+      <div class="rev-empty" data-reveal>
+        <svg class="re-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M5 6h22v16H14l-6 5v-5H5z"/></svg>
+        <h3>نبني ثقة عملائنا أولاً</h3>
+        <p>سنعرض هنا آراء عملائنا الحقيقية فور اكتمال مشاريعهم. نلتزم بعرض التقييمات الصادقة فقط.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">FAQ</span>
+        <h2>الأسئلة الشائعة</h2>
+      </div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>هل تعملون في الدمام فقط؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">نخدم الدمام والخبر والظهران ومدن المنطقة الشرقية حسب نطاق وطبيعة المشروع. تواصل معنا لمعرفة إمكانية تغطية موقعك.</div>
+        </details>
+        <details>
+          <summary>هل تقدّمون معاينة للمشروع؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">نعم، نقوم بمعاينة الموقع وفهم نطاق الأعمال قبل إعداد العرض. شاركنا تفاصيل مشروعك وسنتواصل معك لتنسيق المعاينة والخطوات المناسبة.</div>
+        </details>
+        <details>
+          <summary>هل يمكن طلب عرض سعر قبل التعاقد؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">نعم. نقدّم عرض سعر بعد فهم تفاصيل المشروع ونطاق الأعمال، ويعتمد العرض على طبيعة العمل ومتطلباته.</div>
+        </details>
+        <details>
+          <summary>هل توفّرون مواد البناء؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">يعتمد ذلك على طبيعة المشروع وبنود العقد المتفق عليها. نوضّح ما يشمله نطاق الأعمال بشكل صريح ضمن العرض.</div>
+        </details>
+        <details>
+          <summary>هل تنفّذون مشاريع الترميم؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">نعم، الترميم وإعادة التأهيل من خدماتنا الأساسية — بما في ذلك معالجة الأعمال القائمة وتجديدها ورفع كفاءتها.</div>
+        </details>
+        <details>
+          <summary>هل يمكن التعاقد على التنفيذ فقط؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">يختلف ذلك حسب نطاق المشروع ومتطلباته. تواصل معنا لتوضيح الطريقة الأنسب لمشروعك.</div>
+        </details>
+        <details>
+          <summary>كم يستغرق إعداد عرض السعر؟<svg class="fq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="fa-body">تعتمد المدة على حجم المشروع وتوفّر التفاصيل والمعاينة. نحرص على تقديم العرض في أقرب وقت ممكن بعد استيفاء المعلومات اللازمة.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / طلب عرض سعر -->
+  <section id="contact" class="band">
     <div class="wrap">
       <div class="sec-head" data-reveal>
         <span class="eyebrow">Get In Touch</span>
-        <h2>تواصل معنا</h2>
-        <p>أخبرنا عن مشروعك، وسنعاود التواصل معك بعرضٍ مناسب في أقرب وقت.</p>
+        <h2>اطلب عرض سعر</h2>
+        <p>شاركنا تفاصيل مشروعك، وسنتواصل معك لمناقشة نطاق العمل وتقديم عرض مناسب في أقرب وقت.</p>
       </div>
       <div class="contact">
         <div class="cinfo" data-stagger>
           <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5c0 9 6 15 15 15l2-4-5-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-5z"/></svg><div><div class="k">Phone</div><div class="v"><a class="lat" href="tel:+966533580493">+966 53 358 0493</a></div></div></div>
           <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4a10 10 0 00-15 13l-1 4 4-1A10 10 0 1020 4z"/><path d="M9 8c0 5 3 8 8 8 1 0 1-1 1-2l-2-1-1 1c-2 0-4-2-4-4l1-1-1-2c-1 0-2 0-2 1z"/></svg><div><div class="k">WhatsApp</div><div class="v"><a class="lat" href="https://wa.me/966533580493" target="_blank" rel="noopener">+966 53 358 0493</a></div></div></div>
           <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg><div><div class="k">Email</div><div class="v"><a class="lat" href="mailto:marafialtawd@gmail.com">marafialtawd@gmail.com</a></div></div></div>
-          <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-6.5 8-13a8 8 0 10-16 0c0 6.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><div><div class="k">Address</div><div class="v">الدمام، المنطقة الشرقية، المملكة العربية السعودية</div></div></div>
+          <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-6.5 8-13a8 8 0 10-16 0c0 6.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><div><div class="k">Address</div><div class="v">الدمام، المنطقة الشرقية، المملكة العربية السعودية<small>نخدم الدمام والخبر والظهران ومدن المنطقة الشرقية حسب نطاق المشروع</small></div></div></div>
         </div>
-        <form id="cform" data-reveal>
-          <div><label for="n">الاسم</label><input id="n" name="n" required placeholder="اسمك الكريم"></div>
-          <div><label for="p">رقم الجوال</label><input id="p" name="p" inputmode="tel" required placeholder="05XXXXXXXX"></div>
-          <div><label for="m">تفاصيل المشروع</label><textarea id="m" name="m" required placeholder="اكتب نوع المشروع، الموقع، وأي تفاصيل تساعدنا"></textarea></div>
-          <button type="submit" class="btn btn-solid">إرسال عبر واتساب</button>
+        <form id="cform" data-reveal novalidate>
+          <div class="frow">
+            <div><label for="f-name">الاسم</label><input id="f-name" name="name" required autocomplete="name" placeholder="اسمك الكريم"></div>
+            <div><label for="f-phone">رقم الجوال</label><input id="f-phone" name="phone" inputmode="tel" required autocomplete="tel" placeholder="05XXXXXXXX"></div>
+          </div>
+          <div class="frow">
+            <div><label for="f-city">المدينة</label><input id="f-city" name="city" required placeholder="مثال: الدمام"></div>
+            <div><label for="f-type">نوع المشروع</label>
+              <select id="f-type" name="type" required>
+                <option value="" disabled selected>اختر نوع المشروع</option>
+                <option value="بناء جديد">بناء جديد</option>
+                <option value="ترميم">ترميم</option>
+                <option value="تشطيب">تشطيب</option>
+                <option value="إعادة تأهيل">إعادة تأهيل</option>
+                <option value="مشروع تجاري">مشروع تجاري</option>
+                <option value="أخرى">أخرى</option>
+              </select>
+            </div>
+          </div>
+          <div><label for="f-msg">تفاصيل المشروع</label><textarea id="f-msg" name="msg" required placeholder="اكتب نبذة عن المشروع، الموقع، والمساحة، وأي تفاصيل تساعدنا في تقدير العرض"></textarea></div>
+          <div><label for="f-budget">الميزانية التقريبية <span class="opt">(اختياري)</span></label><input id="f-budget" name="budget" placeholder="مثال: 150,000 ريال — أو اتركه فارغاً"></div>
+          <button type="submit" class="btn btn-solid">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 4a10 10 0 00-15 13l-1 4 4-1A10 10 0 1020 4z"/></svg>
+            اطلب عرض سعر عبر واتساب
+          </button>
           <p class="note">سيفتح واتساب برسالة جاهزة تحتوي طلبك — تصلنا مباشرة على رقم المؤسسة.</p>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" style="padding:0">
+    <div class="final-cta" style="border:0;background:transparent;padding:76px 0">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="fc-inner" data-reveal>
+          <h2>جاهز لتبدأ مشروعك؟</h2>
+          <p>شاركنا تفاصيل مشروعك وسنتواصل معك لمناقشة نطاق العمل والخطوات المناسبة.</p>
+          <div class="cta">
+            <a href="#contact" class="btn btn-solid">اطلب عرض سعر</a>
+            <a href="https://wa.me/966533580493" target="_blank" rel="noopener" class="btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 4a10 10 0 00-15 13l-1 4 4-1A10 10 0 1020 4z"/></svg>
+              راسلنا على واتساب
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -456,14 +813,32 @@
           </svg>
           <span class="txt"><span class="ar">مرافئ الطود</span><span class="en">Marafi Altawd Contracting</span></span>
         </a>
-        <p>مؤسسة سعودية للمقاولات العامة والإنشاءات وأعمال الترميم وإعادة التأهيل — نبني بثبات الطود.</p>
+        <p>مؤسسة مرافئ الطود للمقاولات — المقاولات العامة والإنشاءات والترميم وإعادة التأهيل.</p>
+        <p class="foot-addr">الدمام – المنطقة الشرقية – المملكة العربية السعودية</p>
+        <div class="socials">
+          <a href="https://wa.me/966533580493" target="_blank" rel="noopener" aria-label="واتساب">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4a10 10 0 00-15 13l-1 4 4-1A10 10 0 1020 4z"/><path d="M9 8c0 5 3 8 8 8 1 0 1-1 1-2l-2-1-1 1c-2 0-4-2-4-4l1-1-1-2c-1 0-2 0-2 1z"/></svg>
+          </a>
+          <a href="mailto:marafialtawd@gmail.com" aria-label="البريد الإلكتروني">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+          <a href="https://instagram.com/marafialtawd" target="_blank" rel="noopener" data-social="instagram" aria-label="إنستغرام">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/marafi-altawd-contracting/" target="_blank" rel="noopener" data-social="linkedin" aria-label="لينكدإن">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16"/><path d="M8 10v7M8 7v0M12 17v-4a2 2 0 014 0v4"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <h5>روابط سريعة</h5>
         <ul>
+          <li><a href="#top">الرئيسية</a></li>
           <li><a href="#about">من نحن</a></li>
           <li><a href="#services">خدماتنا</a></li>
-          <li><a href="#process">آلية العمل</a></li>
+          <li><a href="#projects">مشاريعنا</a></li>
+          <li><a href="#process">كيف نعمل</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
           <li><a href="#contact">تواصل معنا</a></li>
         </ul>
       </div>
@@ -483,19 +858,83 @@
   </div>
 </footer>
 
+<!-- Floating WhatsApp -->
+<a class="fab" href="https://wa.me/966533580493" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5.1a6.7 6.7 0 01-2-1.2 7.4 7.4 0 01-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.4.2-.4a.5.5 0 000-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1 4.9 4.9 0 001 2.6 11 11 0 004.3 3.8c1.6.6 1.6.4 1.9.4a2.5 2.5 0 001.7-1.2 2 2 0 00.1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+  <span class="fab-txt">واتساب</span>
+</a>
+
+<!-- SEO: LocalBusiness / GeneralContractor -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "مؤسسة مرافئ الطود للمقاولات",
+  "alternateName": "Marafi Altawd Contracting",
+  "url": "https://marafialtawd.com/",
+  "telephone": "+966533580493",
+  "email": "marafialtawd@gmail.com",
+  "description": "مؤسسة سعودية في الدمام متخصصة في المقاولات العامة والإنشاءات والترميم وإعادة تأهيل المباني.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "الدمام",
+    "addressRegion": "المنطقة الشرقية",
+    "addressCountry": "SA"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "الدمام"},
+    {"@type": "City", "name": "الخبر"},
+    {"@type": "City", "name": "الظهران"},
+    {"@type": "AdministrativeArea", "name": "المنطقة الشرقية"}
+  ],
+  "knowsAbout": ["المقاولات العامة", "الإنشاءات", "الترميم", "إعادة التأهيل"],
+  "identifier": {"@type": "PropertyValue", "name": "السجل التجاري", "value": "7055090851"}
+}
+</script>
+
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* القائمة على الجوال */
   var burger=document.getElementById('burger'),menu=document.getElementById('menu');
   burger.addEventListener('click',function(){
     var open=menu.classList.toggle('open');
     burger.setAttribute('aria-expanded',open);
   });
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded',false);});});
+
+  /* تمرير سلس مع مراعاة الهيدر الثابت + تمرير التركيز لحقل التفاصيل عند "اطلب معاينة" */
+  document.querySelectorAll('a[data-project]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var t=document.getElementById('f-type');
+      setTimeout(function(){ if(t){ /* لا نغيّر الاختيار، فقط نركّز على النموذج */ document.getElementById('f-name').focus(); } },600);
+    });
+  });
+
+  /* نموذج طلب عرض السعر → واتساب */
   document.getElementById('cform').addEventListener('submit',function(e){
     e.preventDefault();
-    var n=this.n.value.trim(),p=this.p.value.trim(),m=this.m.value.trim();
-    var msg=encodeURIComponent('طلب عرض سعر — مرافئ الطود\nالاسم: '+n+'\nالجوال: '+p+'\n\nتفاصيل المشروع:\n'+m);
-    window.open('https://wa.me/966533580493?text='+msg,'_blank');
+    var f=this;
+    if(!f.checkValidity()){ f.reportValidity && f.reportValidity(); return; }
+    var name=f.name.value.trim(),
+        phone=f.phone.value.trim(),
+        city=f.city.value.trim(),
+        type=f.type.value,
+        msg=f.msg.value.trim(),
+        budget=f.budget.value.trim();
+    var text='السلام عليكم، أرغب في طلب عرض سعر من مؤسسة مرافئ الطود.'
+      +'\nالاسم: '+name
+      +'\nالجوال: '+phone
+      +'\nالمدينة: '+city
+      +'\nنوع المشروع: '+type
+      +'\nتفاصيل المشروع: '+msg
+      +'\nالميزانية التقريبية: '+(budget||'غير محدد');
+    window.open('https://wa.me/966533580493?text='+encodeURIComponent(text),'_blank');
+  });
+
+  /* منع الروابط الاجتماعية المؤقتة (placeholder) من القفز لأعلى الصفحة قبل إضافة الروابط الحقيقية */
+  document.querySelectorAll('.socials a[data-social][href="#"]').forEach(function(a){
+    a.addEventListener('click',function(ev){ ev.preventDefault(); });
   });
 
   /* ===== طبقة الحركة ===== */
@@ -510,22 +949,6 @@
       });
     },{threshold:.14,rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('[data-reveal],[data-stagger]').forEach(function(el){io.observe(el);});
-
-    var ran=false;
-    function runCounts(){
-      if(ran)return; ran=true;
-      document.querySelectorAll('.cval').forEach(function(el){
-        var to=parseFloat(el.getAttribute('data-to'))||0,pre=el.getAttribute('data-prefix')||'',t0=null,dur=1500;
-        el.textContent=pre+'0';
-        function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-k,3);el.textContent=pre+Math.round(to*e);if(k<1)requestAnimationFrame(step);}
-        requestAnimationFrame(step);
-      });
-    }
-    var side=document.querySelector('.hero-stats');
-    if(side){
-      var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){runCounts();io2.disconnect();}});},{threshold:.3});
-      io2.observe(side);
-    } else { runCounts(); }
   }
 </script>
 
