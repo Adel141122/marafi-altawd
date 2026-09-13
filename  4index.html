@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1C1A17">
+<title>مرافئ الطود</title>
+<meta name="description" content="مؤسسة مرافئ الطود للمقاولات العامة والإنشاءات وأعمال الترميم وإعادة التأهيل">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Saira:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ink:#1C1A17;        /* الفحمي الأساسي */
+    --ink-2:#232019;       /* لوح أفتح قليلاً */
+    --ink-3:#2B271F;       /* بطاقة */
+    --sand:#D6C2A6;        /* الرملي المميّز */
+    --stone:#B7B0A5;       /* الحجري الثانوي */
+    --umber:#6B5746;       /* البنّي - لمسات وحدود */
+    --cream:#ECE5DA;       /* كريمي للعناوين القوية */
+    --line:rgba(107,87,70,.42);
+    --line-soft:rgba(107,87,70,.22);
+    --grid:rgba(214,194,166,.05);
+    --maxw:1200px;
+    --ar:"IBM Plex Sans Arabic","GE SS Two","Segoe UI",Tahoma,sans-serif;
+    --lat:"Saira","DIN Next LT Pro",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ink);color:var(--stone);direction:rtl;
+    font-family:var(--ar);font-weight:400;line-height:1.85;
+    font-size:17px;-webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  h1,h2,h3,h4{margin:0;color:var(--cream);font-weight:600;line-height:1.25;text-wrap:balance}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .lat{font-family:var(--lat);direction:ltr;unicode-bidi:isolate}
+  .eyebrow{
+    font-family:var(--lat);font-size:12.5px;font-weight:600;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--sand);display:inline-flex;align-items:center;gap:12px;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--umber)}
+
+  /* ===== Header ===== */
+  header{position:sticky;top:0;z-index:50;background:rgba(28,26,23,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand .mark{width:38px;height:38px;flex:none}
+  .brand .txt{display:flex;flex-direction:column;line-height:1.15}
+  .brand .ar{color:var(--cream);font-weight:700;font-size:19px}
+  .brand .en{font-family:var(--lat);font-size:11px;letter-spacing:.24em;color:var(--stone);text-transform:uppercase}
+  .menu{display:flex;gap:34px;align-items:center}
+  .menu a{font-size:15.5px;color:var(--stone);position:relative;padding:6px 0;transition:color .2s}
+  .menu a:hover{color:var(--cream)}
+  .menu a::after{content:"";position:absolute;bottom:0;right:0;height:1px;width:0;background:var(--sand);transition:width .25s}
+  .menu a:hover::after{width:100%}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--ar);font-size:15.5px;font-weight:600;
+    padding:12px 24px;border:1px solid var(--sand);color:var(--sand);background:transparent;cursor:pointer;
+    transition:background .2s,color .2s}
+  .btn:hover{background:var(--sand);color:var(--ink)}
+  .btn-solid{background:var(--sand);color:var(--ink);border-color:var(--sand)}
+  .btn-solid:hover{background:var(--cream);border-color:var(--cream)}
+  .burger{display:none;background:none;border:1px solid var(--line);color:var(--sand);width:44px;height:40px;cursor:pointer;font-size:20px}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+  .hero .grid-bg{position:absolute;inset:0;z-index:0;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:52px 52px;mask-image:linear-gradient(180deg,transparent,#000 22%,#000 60%,transparent)}
+  .hero .inner{position:relative;z-index:2;padding:84px 0 90px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero-mark{width:clamp(122px,15vw,170px);margin-bottom:30px}
+  .hero-mark svg{width:100%;height:auto;display:block}
+  .hero h1{font-size:clamp(38px,6vw,72px);font-weight:700;color:var(--cream);letter-spacing:-.01em;margin:20px 0 0}
+  .hero h1 .accent{color:var(--sand)}
+  .hero .lead{font-size:19px;color:var(--stone);max-width:58ch;margin:24px auto 0;line-height:1.9}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:38px;justify-content:center}
+  .hero-stats{display:flex;justify-content:center;width:100%;max-width:760px;margin-top:56px;border-top:1px solid var(--line-soft)}
+  .hero-stats .kpi{flex:1;padding:28px 14px;border-inline-end:1px solid var(--line-soft)}
+  .hero-stats .kpi:last-child{border-inline-end:0}
+  .hero-stats .num{font-family:var(--lat);font-size:clamp(34px,4.6vw,46px);font-weight:600;color:var(--sand);line-height:1;display:flex;align-items:baseline;gap:4px;justify-content:center}
+  .hero-stats .num small{font-size:20px;color:var(--umber)}
+  .hero-stats .num2{font-family:var(--ar);font-size:clamp(17px,2.1vw,21px);font-weight:600;color:var(--sand);line-height:1.35;text-wrap:balance}
+  .hero-stats .lbl{font-size:13.5px;color:var(--stone);margin-top:10px}
+
+  /* ===== Section shell ===== */
+  section{padding:92px 0}
+  .sec-head{max-width:70ch;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:16px}
+  .sec-head p{margin-top:16px;font-size:17.5px;color:var(--stone)}
+  .band{background:var(--ink-2);border-block:1px solid var(--line-soft)}
+
+  /* ===== About ===== */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .about .body p+p{margin-top:18px}
+  .about .body .name-mean{margin-top:26px;padding:20px 24px;border-inline-start:2px solid var(--sand);background:var(--ink-2);color:var(--cream);font-size:16.5px}
+  .pillars{display:grid;gap:0;border:1px solid var(--line)}
+  .pillar{padding:26px 28px;border-bottom:1px solid var(--line-soft);display:flex;gap:20px;align-items:flex-start}
+  .pillar:last-child{border-bottom:0}
+  .pillar .pn{font-family:var(--lat);font-size:14px;color:var(--umber);font-weight:600;padding-top:4px;min-width:28px}
+  .pillar h4{font-size:18px;margin-bottom:4px}
+  .pillar p{font-size:15px;color:var(--stone)}
+
+  /* ===== Services ===== */
+  .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line)}
+  .svc-card{padding:40px 34px;border-inline-end:1px solid var(--line-soft);position:relative;transition:background .25s}
+  .svc-card:last-child{border-inline-end:0}
+  .svc-card:hover{background:var(--ink-2)}
+  .svc-card .ico{width:46px;height:46px;color:var(--sand);margin-bottom:26px}
+  .svc-card h3{font-size:22px;margin-bottom:14px}
+  .svc-card p{font-size:15.5px;color:var(--stone);margin-bottom:22px}
+  .svc-card ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+  .svc-card li{font-size:15px;color:var(--stone);display:flex;gap:11px;align-items:flex-start}
+  .svc-card li::before{content:"";width:6px;height:6px;background:var(--umber);margin-top:9px;flex:none}
+
+  /* ===== Process ===== */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);counter-reset:st}
+  .step{padding:34px 28px;border-inline-end:1px solid var(--line-soft)}
+  .step:last-child{border-inline-end:0}
+  .step .sn{font-family:var(--lat);font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--sand)}
+  .step h4{font-size:18.5px;margin:16px 0 10px}
+  .step p{font-size:14.5px;color:var(--stone)}
+
+  /* ===== Projects ===== */
+  .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pcard{border:1px solid var(--line);background:var(--ink-2);display:flex;flex-direction:column;overflow:hidden}
+  .pcard .ph{aspect-ratio:4/3;background:var(--ink-3);position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+  .pcard .ph svg{position:absolute;inset:0;width:100%;height:100%}
+  .pcard .cat{position:absolute;top:0;inset-inline-start:0;background:var(--sand);color:var(--ink);font-size:12.5px;font-weight:600;padding:6px 13px}
+  .pcard .info{padding:22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .pcard h4{font-size:18.5px}
+  .pcard .meta{font-family:var(--lat);font-size:13px;letter-spacing:.06em;color:var(--umber);margin-top:auto}
+  .pcard .meta span{color:var(--stone)}
+
+  /* ===== Why ===== */
+  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line)}
+  .why-item{padding:32px 34px;border-inline-end:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);display:flex;gap:20px}
+  .why-item:nth-child(2n){border-inline-end:0}
+  .why-item:nth-last-child(-n+2){border-bottom:0}
+  .why-item .wi{width:34px;height:34px;color:var(--sand);flex:none}
+  .why-item h4{font-size:19px;margin-bottom:8px}
+  .why-item p{font-size:15px;color:var(--stone)}
+
+  /* ===== Contact ===== */
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .cinfo{display:grid;gap:0;border:1px solid var(--line)}
+  .cinfo .row{padding:24px 28px;border-bottom:1px solid var(--line-soft);display:flex;gap:18px;align-items:flex-start}
+  .cinfo .row:last-child{border-bottom:0}
+  .cinfo .ci{width:26px;height:26px;color:var(--sand);flex:none;margin-top:3px}
+  .cinfo .k{font-size:14px;color:var(--umber);font-family:var(--lat);letter-spacing:.14em;text-transform:uppercase}
+  .cinfo .v{font-size:17px;color:var(--cream);margin-top:4px}
+  .cinfo .v .lat{color:var(--cream)}
+  .cinfo .v a{color:var(--cream);transition:color .2s}
+  .cinfo .v a:hover{color:var(--sand)}
+  form{display:grid;gap:16px}
+  label{font-size:14px;color:var(--stone);display:block;margin-bottom:8px}
+  input,textarea{width:100%;background:var(--ink-2);border:1px solid var(--line);color:var(--cream);
+    font-family:var(--ar);font-size:16px;padding:14px 16px;transition:border-color .2s}
+  input:focus,textarea:focus{outline:none;border-color:var(--sand)}
+  textarea{resize:vertical;min-height:130px}
+  form .btn{justify-content:center;margin-top:6px}
+  .note{font-size:13.5px;color:var(--umber);margin-top:2px}
+
+  /* ===== Footer ===== */
+  footer{background:var(--ink-2);border-top:1px solid var(--line);padding:56px 0 34px}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-soft)}
+  .foot p{font-size:15px;color:var(--stone);max-width:36ch;margin-top:18px}
+  .foot h5{font-size:13px;font-family:var(--lat);letter-spacing:.18em;text-transform:uppercase;color:var(--umber);margin-bottom:16px}
+  .foot ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+  .foot li a{font-size:15px;color:var(--stone);transition:color .2s}
+  .foot li a:hover{color:var(--sand)}
+  .copy{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;color:var(--umber)}
+  .copy .lat{color:var(--umber)}
+
+  /* ===== Motion (طبقة الحركة) ===== */
+  /* كل شيء ظاهر افتراضياً؛ الحركة تُفعّل فقط عند إضافة .motion على <html> عبر JS */
+  html.motion [data-reveal]{opacity:0;transform:translateY(24px);
+    transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1)}
+  html.motion [data-reveal].in{opacity:1;transform:none}
+  html.motion [data-stagger]>*{opacity:0;transform:translateY(24px);
+    transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
+  html.motion [data-stagger].in>*{opacity:1;transform:none}
+  html.motion [data-stagger].in>*:nth-child(1){transition-delay:.00s}
+  html.motion [data-stagger].in>*:nth-child(2){transition-delay:.10s}
+  html.motion [data-stagger].in>*:nth-child(3){transition-delay:.20s}
+  html.motion [data-stagger].in>*:nth-child(4){transition-delay:.30s}
+
+  /* دخول الواجهة عند التحميل */
+  html.motion .hero .inner>*{opacity:0;animation:heroIn .85s cubic-bezier(.22,.61,.36,1) forwards}
+  html.motion .hero-mark{animation-delay:0s}
+  html.motion .hero .eyebrow{animation-delay:.15s}
+  html.motion .hero h1{animation-delay:.25s}
+  html.motion .hero .lead{animation-delay:.40s}
+  html.motion .hero .cta{animation-delay:.55s}
+  html.motion .hero-stats{animation-delay:.70s}
+  @keyframes heroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+  /* انزياح لطيف للشبكة الهندسية */
+  html.motion .hero .grid-bg{animation:gridDrift 30s linear infinite}
+  @keyframes gridDrift{from{background-position:0 0,0 0}to{background-position:52px 52px,52px 52px}}
+
+  /* ظهور الشعار متحركاً (رسم الحلقة ثم صعود الطود ثم القاعدة) */
+  html.motion .logoreveal .lr-ring{stroke-dasharray:202;stroke-dashoffset:202;
+    transform:rotate(-90deg);transform-box:fill-box;transform-origin:center;
+    animation:lrRing 1s cubic-bezier(.65,0,.35,1) .15s forwards}
+  html.motion .logoreveal .lr-pillar,
+  html.motion .logoreveal .lr-base{opacity:0;transform:translateY(7px);
+    transform-box:fill-box;transform-origin:50% 100%;
+    animation:lrRise .55s cubic-bezier(.22,.61,.36,1) forwards}
+  html.motion .logoreveal .lr-pillar{animation-delay:.7s}
+  html.motion .logoreveal .lr-base{animation-delay:.95s}
+  @keyframes lrRing{to{stroke-dashoffset:0}}
+  @keyframes lrRise{to{opacity:1;transform:none}}
+
+  /* طَوَفان لطيف للشعار المركزي بعد اكتمال رسمه */
+  html.motion .hero-mark svg{animation:heroFloat 7s ease-in-out 1.4s infinite}
+  @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+  /* رفع خفيف للبطاقات عند المرور */
+  .svc-card,.pcard,.why-item,.pillar{transition:transform .3s ease,background .25s ease}
+  .pcard:hover{transform:translateY(-4px)}
+  .pcard .ph svg{transition:transform .5s ease}
+  .pcard:hover .ph svg{transform:scale(1.04)}
+  .btn{transition:background .2s,color .2s,transform .15s}
+  .btn:active{transform:translateY(1px)}
+  header{transition:border-color .3s,background .3s}
+  header.scrolled{border-bottom-color:var(--line)}
+
+  @media (prefers-reduced-motion:reduce){
+    html.motion [data-reveal],html.motion [data-stagger]>*{opacity:1!important;transform:none!important}
+    html.motion .hero .inner>*{opacity:1!important;animation:none!important}
+    html.motion .hero .grid-bg{animation:none!important}
+    html.motion .logoreveal .lr-ring{animation:none!important;stroke-dashoffset:0!important;transform:none!important}
+    html.motion .logoreveal .lr-pillar,html.motion .logoreveal .lr-base{animation:none!important;opacity:1!important;transform:none!important}
+    html.motion .hero-mark svg{animation:none!important;transform:none!important}
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width:980px){
+    .about,.contact{grid-template-columns:1fr;gap:40px}
+    .svc,.steps{grid-template-columns:1fr}
+    .svc-card{border-inline-end:0;border-bottom:1px solid var(--line-soft)}
+    .svc-card:last-child{border-bottom:0}
+    .step{border-inline-end:0;border-bottom:1px solid var(--line-soft)}
+    .step:last-child{border-bottom:0}
+    .proj{grid-template-columns:repeat(2,1fr)}
+    .foot{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    .menu{display:none}
+    .burger{display:inline-flex;align-items:center;justify-content:center}
+    .menu.open{display:flex;position:absolute;top:74px;inset-inline:0;flex-direction:column;background:var(--ink-2);
+      border-bottom:1px solid var(--line);padding:20px 28px;gap:18px}
+    .nav .btn{display:none}
+    .why{grid-template-columns:1fr}
+    .why-item{border-inline-end:0}
+    .why-item:nth-last-child(2){border-bottom:1px solid var(--line-soft)}
+    .proj{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .hero .inner{padding:56px 0 64px}
+    .hero-stats{flex-direction:column;max-width:320px}
+    .hero-stats .kpi{border-inline-end:0;border-bottom:1px solid var(--line-soft)}
+    .hero-stats .kpi:last-child{border-bottom:0}
+  }
+</style>
+</head>
+<body>
+<script>
+  /* تفعيل طبقة الحركة مبكراً لتفادي أي وميض، مع احترام «تقليل الحركة» */
+  (function(){try{if(!window.matchMedia||!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion');}}catch(e){}})();
+</script>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="مرافئ الطود للمقاولات">
+      <svg class="mark logoreveal" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle class="lr-ring" cx="50" cy="47" r="32" stroke="#D6C2A6" stroke-width="8"/>
+        <path class="lr-pillar" d="M45 23 L55 23 L61 71 L39 71 Z" fill="#D6C2A6"/>
+        <rect class="lr-base" x="33" y="69" width="34" height="11" fill="#D6C2A6" stroke="#1C1A17" stroke-width="1.6"/>
+      </svg>
+      <span class="txt">
+        <span class="ar">مرافئ الطود</span>
+        <span class="en">Marafi Altawd</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#process">آلية العمل</a>
+      <a href="#why">لماذا نحن</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <a href="#contact" class="btn btn-solid">اطلب عرض سعر</a>
+    <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="padding:0">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap inner">
+      <div class="hero-mark">
+        <svg viewBox="0 0 100 100" class="logoreveal" fill="none" aria-hidden="true">
+          <circle class="lr-ring" cx="50" cy="47" r="32" stroke="#D6C2A6" stroke-width="7"/>
+          <path class="lr-pillar" d="M45 23 L55 23 L61 71 L39 71 Z" fill="#D6C2A6"/>
+          <rect class="lr-base" x="33" y="69" width="34" height="11" fill="#D6C2A6" stroke="#1C1A17" stroke-width="1.4"/>
+        </svg>
+      </div>
+      <span class="eyebrow">General Contracting Est.</span>
+      <h1>نُرسي الثقة، ونبني ما <span class="accent">يدوم</span>.</h1>
+      <p class="lead">مؤسسة مرافئ الطود للمقاولات — متخصّصون في البناء والإنشاءات العامة وأعمال الترميم وإعادة التأهيل، بثبات الطود ودقّة الالتزام.</p>
+      <div class="cta">
+        <a href="#contact" class="btn btn-solid">تواصل معنا</a>
+        <a href="#services" class="btn">تعرّف على خدماتنا</a>
+      </div>
+      <div class="hero-stats">
+        <div class="kpi"><div class="num2">حديثة التأسيس</div><div class="lbl">مؤسسة سعودية · س.ت 7055090851 · الدمام</div></div>
+        <div class="kpi"><div class="num2">عقود واضحة</div><div class="lbl">شروط وأسعار شفافة بلا مفاجآت</div></div>
+        <div class="kpi"><div class="num2">التزام بالمواعيد</div><div class="lbl">جداول زمنية واقعية نلتزم بها</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">About Us</span>
+        <h2>من نحن</h2>
+      </div>
+      <div class="about">
+        <div class="body" data-reveal>
+          <p>مرافئ الطود مؤسسة سعودية حديثة التأسيس، متخصصة في البناء والإنشاءات وأعمال الترميم وإعادة التأهيل. تأسّست على مبدأ واضح: أن يكون كل مشروع شاهداً على الجودة والالتزام، لا مجرّد وعد.</p>
+          <p>نبني نموذجنا على شراكات مع منفّذين مُختارين بعناية، وإشرافٍ دقيق على التنفيذ، والتزامٍ تعاقدي شفاف — لنقدّم لعملائنا عقوداً واضحة وجداول زمنية نلتزم بها من أول اجتماع حتى التسليم.</p>
+          <div class="name-mean">«الطود» هو الجبل الراسخ الشامخ، و«المرافئ» هي مواطن الأمان والرسوّ — واسمنا وعدٌ بالثبات الذي نبني عليه، والثقة التي يرسو إليها عملاؤنا.</div>
+        </div>
+        <div class="pillars" data-stagger>
+          <div class="pillar"><span class="pn lat">01</span><div><h4>رؤيتنا</h4><p>أن نكون الخيار الأول في المقاولات المتكاملة عبر جودة تُقاس بالنتائج لا بالوعود.</p></div></div>
+          <div class="pillar"><span class="pn lat">02</span><div><h4>رسالتنا</h4><p>تنفيذ مشاريع إنشائية تدوم، ضمن الميزانية والجدول الزمني، وبمعايير سلامة صارمة.</p></div></div>
+          <div class="pillar"><span class="pn lat">03</span><div><h4>قيمنا</h4><p>الالتزام، الإتقان، الشفافية، والاحترام الكامل لثقة العميل في كل تفصيل.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="band">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Our Services</span>
+        <h2>خدماتنا</h2>
+        <p>مجالان نتقنهما، ونغطّي فيهما دورة المشروع كاملة — من التصميم حتى التسليم.</p>
+      </div>
+      <div class="svc" data-stagger>
+        <div class="svc-card">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M6 42V20l14-10 14 10v22"/><path d="M6 42h36"/><rect x="16" y="28" width="8" height="14"/><path d="M20 10V4h20v18"/><path d="M40 42V22"/></svg>
+          <h3>المقاولات العامة والإنشاءات</h3>
+          <p>بناء المنشآت السكنية والتجارية بجودة تدوم، من الأساسات حتى التسليم.</p>
+          <ul>
+            <li>الهياكل الخرسانية والأعمال الإنشائية</li>
+            <li>البناء السكني والتجاري</li>
+            <li>التشطيبات الداخلية والخارجية</li>
+            <li>إدارة وتنفيذ المشاريع المتكاملة</li>
+          </ul>
+        </div>
+        <div class="svc-card">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M30 6l4 4-16 16-6 2 2-6z"/><path d="M8 42h32"/><path d="M12 42V26l10-10"/><path d="M36 42V22"/></svg>
+          <h3>الترميم وإعادة التأهيل</h3>
+          <p>إعادة الحياة للمباني القائمة ورفع كفاءتها الإنشائية والجمالية.</p>
+          <ul>
+            <li>ترميم المباني والمنشآت</li>
+            <li>إعادة التأهيل والتقوية الإنشائية</li>
+            <li>معالجة التشققات والعزل</li>
+            <li>تجديد الواجهات والتشطيبات</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">How We Work</span>
+        <h2>آلية العمل</h2>
+        <p>منهجية واضحة نلتزم بها في كل مشروع، خطوةً بخطوة.</p>
+      </div>
+      <div class="steps" data-stagger>
+        <div class="step"><div class="sn lat">STEP 01</div><h4>الدراسة والاستشارة</h4><p>فهم احتياج العميل، معاينة الموقع، وتقديم الاستشارة الفنية والتقدير المبدئي.</p></div>
+        <div class="step"><div class="sn lat">STEP 02</div><h4>التصميم والتخطيط</h4><p>إعداد المخططات والجداول الزمنية والميزانية التفصيلية قبل الانطلاق.</p></div>
+        <div class="step"><div class="sn lat">STEP 03</div><h4>التنفيذ</h4><p>تنفيذ ميداني منضبط بإشراف هندسي مستمر ومعايير سلامة صارمة.</p></div>
+        <div class="step"><div class="sn lat">STEP 04</div><h4>التسليم والضمان</h4><p>تسليم المشروع في موعده مع ضمان جودة الأعمال وسلامة التنفيذ.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="band">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Why Marafi Altawd</span>
+        <h2>لماذا تختار مرافئ الطود</h2>
+      </div>
+      <div class="why" data-stagger>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3l11 5v7c0 7-4.6 11.6-11 14C9.6 26.6 5 22 5 15V8z"/><path d="M11 16l3.5 3.5L22 12"/></svg><div><h4>جودة والتزام بالسلامة</h4><p>نطبّق معايير الجودة والسلامة المهنية في كل مرحلة، لأن السلامة ليست خياراً.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg><div><h4>الالتزام بالمواعيد</h4><p>جداول زمنية واقعية نلتزم بها — تسليمٌ في وقته دون مساومة على الجودة.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="4"/><path d="M4 27c0-4 3-7 7-7s7 3 7 7"/><path d="M21 8a4 4 0 010 8"/><path d="M22 20c3 .5 6 3 6 7"/></svg><div><h4>منفّذون مختارون</h4><p>نتعاقد مع فرق تنفيذ منتقاة بعناية، ونشرف على جودة أعمالها حتى التسليم.</p></div></div>
+        <div class="why-item"><svg class="wi" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3v26"/><path d="M9 7h11a4.5 4.5 0 010 9H10a4.5 4.5 0 000 9h13"/></svg><div><h4>أسعار تنافسية وشفافة</h4><p>عروض أسعار واضحة بلا تكاليف مخفية، وقيمة حقيقية مقابل كل ريال.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Get In Touch</span>
+        <h2>تواصل معنا</h2>
+        <p>أخبرنا عن مشروعك، وسنعاود التواصل معك بعرضٍ مناسب في أقرب وقت.</p>
+      </div>
+      <div class="contact">
+        <div class="cinfo" data-stagger>
+          <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5c0 9 6 15 15 15l2-4-5-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-5z"/></svg><div><div class="k">Phone</div><div class="v"><a class="lat" href="tel:+966533580493">+966 53 358 0493</a></div></div></div>
+          <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4a10 10 0 00-15 13l-1 4 4-1A10 10 0 1020 4z"/><path d="M9 8c0 5 3 8 8 8 1 0 1-1 1-2l-2-1-1 1c-2 0-4-2-4-4l1-1-1-2c-1 0-2 0-2 1z"/></svg><div><div class="k">WhatsApp</div><div class="v"><a class="lat" href="https://wa.me/966533580493" target="_blank" rel="noopener">+966 53 358 0493</a></div></div></div>
+          <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg><div><div class="k">Email</div><div class="v"><a class="lat" href="mailto:marafialtawd@gmail.com">marafialtawd@gmail.com</a></div></div></div>
+          <div class="row"><svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-6.5 8-13a8 8 0 10-16 0c0 6.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><div><div class="k">Address</div><div class="v">الدمام، المنطقة الشرقية، المملكة العربية السعودية</div></div></div>
+        </div>
+        <form id="cform" data-reveal>
+          <div><label for="n">الاسم</label><input id="n" name="n" required placeholder="اسمك الكريم"></div>
+          <div><label for="p">رقم الجوال</label><input id="p" name="p" inputmode="tel" required placeholder="05XXXXXXXX"></div>
+          <div><label for="m">تفاصيل المشروع</label><textarea id="m" name="m" required placeholder="اكتب نوع المشروع، الموقع، وأي تفاصيل تساعدنا"></textarea></div>
+          <button type="submit" class="btn btn-solid">إرسال عبر واتساب</button>
+          <p class="note">سيفتح واتساب برسالة جاهزة تحتوي طلبك — تصلنا مباشرة على رقم المؤسسة.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" aria-label="مرافئ الطود للمقاولات">
+          <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <circle cx="50" cy="47" r="32" stroke="#D6C2A6" stroke-width="8"/>
+            <path d="M45 23 L55 23 L61 71 L39 71 Z" fill="#D6C2A6"/>
+            <rect x="33" y="69" width="34" height="11" fill="#D6C2A6" stroke="#232019" stroke-width="1.6"/>
+          </svg>
+          <span class="txt"><span class="ar">مرافئ الطود</span><span class="en">Marafi Altawd Contracting</span></span>
+        </a>
+        <p>مؤسسة سعودية للمقاولات العامة والإنشاءات وأعمال الترميم وإعادة التأهيل — نبني بثبات الطود.</p>
+      </div>
+      <div>
+        <h5>روابط سريعة</h5>
+        <ul>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#process">آلية العمل</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>معلومات المؤسسة</h5>
+        <ul>
+          <li>السجل التجاري: <span class="lat">7055090851</span></li>
+          <li><a class="lat" href="tel:+966533580493">+966 53 358 0493</a></li>
+          <li><a class="lat" href="mailto:marafialtawd@gmail.com">marafialtawd@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr" class="lat">2026</span> مرافئ الطود للمقاولات. جميع الحقوق محفوظة.</span>
+      <span class="lat">Marafi Altawd Contracting · Dammam, KSA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded',false);});});
+  document.getElementById('cform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=this.n.value.trim(),p=this.p.value.trim(),m=this.m.value.trim();
+    var msg=encodeURIComponent('طلب عرض سعر — مرافئ الطود\nالاسم: '+n+'\nالجوال: '+p+'\n\nتفاصيل المشروع:\n'+m);
+    window.open('https://wa.me/966533580493?text='+msg,'_blank');
+  });
+
+  /* ===== طبقة الحركة ===== */
+  if(document.documentElement.classList.contains('motion')){
+    var hdr=document.querySelector('header');
+    var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>10);};
+    onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('[data-reveal],[data-stagger]').forEach(function(el){io.observe(el);});
+
+    var ran=false;
+    function runCounts(){
+      if(ran)return; ran=true;
+      document.querySelectorAll('.cval').forEach(function(el){
+        var to=parseFloat(el.getAttribute('data-to'))||0,pre=el.getAttribute('data-prefix')||'',t0=null,dur=1500;
+        el.textContent=pre+'0';
+        function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-k,3);el.textContent=pre+Math.round(to*e);if(k<1)requestAnimationFrame(step);}
+        requestAnimationFrame(step);
+      });
+    }
+    var side=document.querySelector('.hero-stats');
+    if(side){
+      var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){runCounts();io2.disconnect();}});},{threshold:.3});
+      io2.observe(side);
+    } else { runCounts(); }
+  }
+</script>
+
+</body>
+</html>
